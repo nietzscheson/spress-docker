@@ -3,7 +3,11 @@ MAINTAINER Marc Pantel <pantel.m@gmail.com>
 
 WORKDIR /tmp
 
-RUN curl -LOS "https://github.com/spress/Spress/releases/download/v2.0.0/spress.phar"
+ARG DEFAULT_VERSION=v2.2.0
+
+ENV VERSION=${DEFAULT_VERSION}
+
+RUN curl -LOS "https://github.com/spress/Spress/releases/download/$VERSION/spress.phar"
 RUN chmod +x spress.phar
 RUN mv spress.phar /usr/local/bin/spress
 
