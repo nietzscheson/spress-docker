@@ -7,6 +7,6 @@ How to use
 ----------
 
 ```
-docker run -v $(pwd):/app pantelm/spress new:site [path] [theme] # create a new site
-docker run -v $(pwd):/app -p 4000:4000 pantelm/spress site:build --server --watch # launch the built-in server and watch your file
+docker run -v $(pwd):/app nietzscheson/spress new:site [path] [theme] # create a new site
+docker run -v $(pwd):/app -p 4000:4000 nietzscheson/spress site:build --server --watch # launch the built-in server and watch your file
 ```
